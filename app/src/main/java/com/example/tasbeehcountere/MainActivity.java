@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.text.DateFormat;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     Button addtas , getcount;
     TextView date;
     Intent intent;
+    ImageButton backendimg;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -27,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
         @SuppressLint("SimpleDateFormat") DateFormat formatter = new SimpleDateFormat("dd/MM/yy");
         Calendar obj = Calendar.getInstance();
         String dateobj = formatter.format(obj.getTime());
+
+        backendimg = findViewById(R.id.backgroundimage);
+        backendimg.setAlpha((int) 50);
 
         date = findViewById(R.id.Date);
         addtas = findViewById(R.id.Add_Tasbeeh);
